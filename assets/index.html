@@ -7,27 +7,12 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" name="" id="display"placeholder="0">
-        <div class="buttons">
-        <button class="btn numbers">7</button>
-        <button class="btn numbers">8</button>
-        <button class="btn numbers">9</button>
-        <button class="operators">+</button>
-        <button class="btn numbers">4</button>
-        <button class="btn numbers">5</button>
-        <button class="btn numbers">6</button>
-        <button class="operators">-</button>
-        <button class="btn numbers">1</button>
-        <button class="btn numbers">2</button>
-        <button class="btn numbers">3</button>
-        <button class="operators">*</button>
-        <button class="clear">C</button>
-        <button class="btn numbers">0</button>
-        <button class="equal">=</button>
-        <button class="operators">/</button>
-        </div>
+    <div class="inputcontainer">
+        <input type="text" id="noteText" placeholder="yazini daxil etmek">
+        <input type="color" id="noteColor" value="#f9f871">
+        <button id="addNote"Add></button>
     </div>
+    <div id="notesContainer"></div>
     <script src="index.js"></script>
 </body>
 </html>

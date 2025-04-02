@@ -1,21 +1,15 @@
-const display = document.getElementById("display");
-const numbers = document.querySelectorAll(".numbers");
-const operators = document.querySelectorAll(".operators");
-const equal = document.querySelector(".equal");
-const clear = document.querySelector(".clear");
-numbers.forEach((number) => {
-    number.addEventListener("click", function () {
-        display.value += number.textContent;
-    });
+document.getElementById("addNote").addEventListener("click", function() {
+    const text = document.getElementById("noteText").value;
+    const color = document.getElementById("noteColor").value;
+    const note = document.createElement("div");
+    note.classList.add("note");
+    note.style.backgroundColor = color;
+    note.textContent = text;
+
+    const randomRotate = Math.floor(Math.random() * 10 - 5) + "deg";
+    note.style.setProperty("--rotate-degree", randomRotate);
+
+    document.getElementById("notesContainer").appendChild(note);
+
+    document.getElementById("noteText").value = "";
 });
-operators.forEach((operator) => {
-    operator.addEventListener("click", function () {
-        display.value += operator.textContent;
-    });
-});
-equal.addEventListener("click", function () {
-        display.value = eval(display.value);
-    });
-clear.addEventListener("click", function () {
-        display.value = "";
-    });
